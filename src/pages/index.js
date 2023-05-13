@@ -1,9 +1,23 @@
 import Head from 'next/head';
 import { useQuerySubscription } from 'react-datocms';
-import styles from '../styles/Home.module.css';
-import DatoProduct from '../app/components/Product/DatoProduct';
+import styles from '../styles/Home.module.scss';
+import DatoProduct from '../components/Product/DatoProduct';
 import { request } from '../lib/datocms';
 import { responsiveImageFragment } from '../lib/fragments';
+import Image from "next/image";
+import { Roboto } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
+ 
+// If loading a variable font, you don't need to specify the font weight
+const roboto = Roboto({ 
+  weight: '700',
+  subsets: ['latin'],
+});
+
+const robotoMono = Roboto_Mono({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -67,8 +81,18 @@ export default function Home({ subscription }) {
         />
       </Head>
 
-      <main className={styles.main}>
-        <h1>Next.js and SnipCart Ecommerce</h1>
+      <main className={robotoMono.className}>
+        <section className={styles.hero}>
+          <div className={styles.container}>
+            <div className={styles.hero_left}>
+              <h1 className={roboto.className}>For mushroom <br></br>lovers, by <br></br>mushroom lovers</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ex molestie, feugiat sem eu, venenatis dui. Morbi dui nibh, luctus non mattis eu, convallis non lectus. </p>
+            </div>
+            <div className={styles.hero_right}>
+              <Image src='/hero.jpg' alt={'woman holding mushrooms'} width={100} height={200}/>
+            </div>
+          </div>
+        </section>
 
         <div className={styles.grid}>
           {products.map((product, i) => (

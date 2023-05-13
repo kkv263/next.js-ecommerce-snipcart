@@ -1,15 +1,27 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.container h1 {
-  text-align: center;
+.hero {
+  .container {
+    display: flex;
+  }
+  h1 {
+    font-size: 80px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+
+  p {
+    padding-bottom: 24px;
+    margin: 0;
+  }
+}
+
+.hero_left {
+  flex: 1 0 70%;
+  max-width: 70%;
 }
 
 .main {

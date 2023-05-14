@@ -1,4 +1,4 @@
-import styles from "./Product.module.css";
+import styles from "../../styles/Product.module.scss";
 import Image from "next/image";
 
 export default function Product(props) {
@@ -7,8 +7,8 @@ export default function Product(props) {
   return (
     <div key={id} className={styles.product}>
       <Image src={imageUrl} alt={`Image of ${name}`} height={640} width={640} />
-      <h3>{name}</h3>
-      <p>{description}</p>
+      <h3 className={styles.product_name}>{name}</h3>
+      <p className={styles.product_desc}>{description}</p>
       <span>${price}</span>
       <div>
         <button

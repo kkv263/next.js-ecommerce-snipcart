@@ -1,0 +1,74 @@
+
+$dark-green: #93c28b;
+
+.button_pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  // border-bottom: 1px solid #000;
+  background: linear-gradient(
+    to left,
+    $dark-green 0%,
+    $dark-green 8%,
+    $dark-green 92%,
+    $dark-green 100%
+  );
+}
+
+.button_front {
+  display: block;
+  position: relative;
+  padding: 8px 32px;
+  border-radius: 8px;
+  color: #000;
+  // border: 1px solid #000;
+  border-bottom: 0;
+  background: #AFE1AF;
+  will-change: transform;
+  transform: translateY(-3px);
+  transition: transform .4s ease;
+  font-size: 16px;
+}
+
+.button_large {
+  .button_front {
+    font-size: 24px;
+    padding: 12px 64px;
+  }
+}
+
+
+.button_pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button_pushable:hover .button_front {
+  transform: translateY(-5px);
+  transition: transform .3s ease;
+}
+
+.button_pushable:active .button_front {
+  transform: translateY(-2px);
+  transition: transform .3s;
+}
+
+.button_pushable:focus:not(:focus-visible) {
+  outline: none;
+}

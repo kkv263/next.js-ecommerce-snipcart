@@ -1,5 +1,5 @@
 .nav {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(#fff, 0.3);
 
   .container {
     display: flex;
@@ -37,7 +37,7 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #000;
+        background-color: #fff;
         transform: scaleX(0);
         transform-origin: top left;
         transition: transform 0.3s ease;

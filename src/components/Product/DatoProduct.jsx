@@ -22,7 +22,7 @@ export default function DatoProduct(product) {
   return (
     <div key={id} className={styles.product}>
       <Image className={styles.product_img} data={image.responsiveImage} alt={image.alt} title={image.title} />
-      <div class={styles.product_text}>
+      <div className={styles.product_text}>
         <h3 className={`${styles.product_name} ${roboto.className}`}>{name}</h3>
         <p className={styles.product_desc}>{description}</p>
         <span className={styles.product_price}>${price}</span> 
@@ -39,7 +39,7 @@ export default function DatoProduct(product) {
           <span className={buttonStyles.button_edge}></span>
           <span className={buttonStyles.button_front}>
             Add to Cart
-            {/* <img src={'/shoppingbag.svg'} alt={image.alt}  /> */}
+            <img src={'/shoppingbag.svg'} alt={image.alt}  />
           </span>
         </button>
       </div>

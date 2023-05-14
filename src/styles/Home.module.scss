@@ -10,7 +10,6 @@
 }
 
 .hero {
-  padding-bottom: 32px;
   .container_full {
     display: flex;
 
@@ -27,6 +26,10 @@
     padding-bottom: 48px;
     margin: 0;
   }
+}
+
+.hero_highlight {
+  color: #5EBCEA;
 }
 
 .hero_left {

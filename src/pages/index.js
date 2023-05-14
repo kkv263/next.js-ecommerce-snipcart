@@ -9,7 +9,10 @@ import { Roboto } from 'next/font/google';
 import { Roboto_Mono } from 'next/font/google';
 
 import Nav from '../components/Nav.jsx';
+import Benefits from '../components/Benefits.jsx';
 import Button from '../components/Button.jsx';
+import Faq from '../components/Faq.jsx'
+import Footer from '../components/Footer.jsx'
  
 // If loading a variable font, you don't need to specify the font weight
 const roboto = Roboto({ 
@@ -88,7 +91,7 @@ export default function Home({ subscription }) {
         <section className={styles.hero}>
           <div className={styles.container_full}>
             <div className={styles.hero_left}>
-              <h1 className={roboto.className}>For mushroom <br></br>lovers, by <br></br>mushroom lovers</h1>
+              <h1 className={roboto.className}>For mushroom <br></br>lovers, <span className={styles.hero_highlight}>by <br></br>mushroom lovers</span></h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ex molestie, feugiat sem eu, venenatis dui. Morbi dui nibh, luctus non mattis eu, convallis non lectus. </p>
               <Button href="/shop" size={'large'}>Shop Now</Button>
             </div>
@@ -97,7 +100,7 @@ export default function Home({ subscription }) {
             </div>
           </div>
         </section>
-
+        <Benefits />
         <section>
           <div className={styles.grid}>
             {products.map((product, i) => (
@@ -105,7 +108,9 @@ export default function Home({ subscription }) {
             ))}
           </div>
         </section>
+        <Faq />
       </main>
+      <Footer />
 
       <div
         id="snipcart"

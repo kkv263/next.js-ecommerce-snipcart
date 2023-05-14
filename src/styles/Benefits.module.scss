@@ -1,0 +1,27 @@
+.benefits {
+  background-color: #272727;
+  padding: 32px 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4px 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.benefits_headline {
+  font-size: 64px;
+  text-align: center;
+  margin: 0;
+}
+
+.benefits_subheadline {
+  text-align: center;
+}
+
+.benefits_img_wrapper {
+  margin-bottom: 64px;
+}

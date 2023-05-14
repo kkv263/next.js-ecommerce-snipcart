@@ -1,0 +1,39 @@
+@import 'vars';
+
+.footer {
+  background-color: $primary;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_headline {
+  margin: 0;
+  font-size: 32px;
+}
+
+.footer_list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin: 0;
+  padding-bottom: 16px;
+
+  li {
+    &:not(:last-child) {
+      &:after { 
+        content: '|';
+        margin: 0 8px;
+        color: rgba(#fff, 0.25)
+      }
+    }
+  }
+
+}

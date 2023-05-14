@@ -1,5 +1,4 @@
-
-$dark-green: #93c28b;
+@import 'vars';
 
 .button_pushable {
   position: relative;
@@ -24,10 +23,10 @@ $dark-green: #93c28b;
   // border-bottom: 1px solid #000;
   background: linear-gradient(
     to left,
-    $dark-green 0%,
-    $dark-green 8%,
-    $dark-green 92%,
-    $dark-green 100%
+    $primary-dark 0%,
+    $primary-dark 8%,
+    $primary-dark 92%,
+    $primary-dark 100%
   );
 }
 
@@ -36,14 +35,64 @@ $dark-green: #93c28b;
   position: relative;
   padding: 8px 32px;
   border-radius: 8px;
-  color: #000;
-  // border: 1px solid #000;
+  color: #fff;
   border-bottom: 0;
-  background: #AFE1AF;
+  background-color: $primary;
   will-change: transform;
   transform: translateY(-3px);
   transition: transform .4s ease;
   font-size: 16px;
+}
+
+.button_arrow {
+  .button_front {
+    display: flex;
+    justify-content: center;
+    padding-right: 64px;
+    padding-left: 16px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 48px;
+      height: 100%;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      right: 0;
+      top: 0;
+      background-color: $primary-dark;
+    }
+
+    img {
+      position: absolute;
+      right: 14px;
+      width: 20px;
+      height: 20px;
+      z-index: 1;
+    }
+  }
+}
+
+.button_secondary {
+  .button_front { 
+    background-color: $secondary;
+    color: #1d1d1d;
+  }
+
+  .button_edge {
+    background: linear-gradient(
+      to left,
+      $secondary-dark 0%,
+      $secondary-dark 8%,
+      $secondary-dark 92%,
+      $secondary-dark 100%
+    );
+  }
+  
+  &.button_arrow {
+    .button_front:after {
+      background-color: $secondary-dark;
+    }
+  }
 }
 
 .button_large {

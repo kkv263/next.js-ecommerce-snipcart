@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
-import products from '../app/assets/products.json';
-import Product from '../app/components/Product/Product';
+import styles from '../styles/Home.module.scss';
+import products from '../assets/products.json';
+import Product from '../components/Product/Product.jsx';
 
 export default function Home() {
   return (

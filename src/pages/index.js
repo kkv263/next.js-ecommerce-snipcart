@@ -93,7 +93,7 @@ export default function Home({ subscription }) {
               <Button href="/shop" size={'large'}>Shop Now</Button>
             </div>
             <div className={styles.hero_right}>
-              <Image src='/hero.jpg' alt={'woman holding mushrooms'} fill/>
+              <Image src='/herodark.jpg' alt={'woman holding mushrooms'} fill/>
             </div>
           </div>
         </section>

@@ -39,7 +39,7 @@ export default function DatoProduct(product) {
           <span className={buttonStyles.button_edge}></span>
           <span className={buttonStyles.button_front}>
             Add to Cart
-            <img src={'/shoppingbag.svg'} alt={image.alt}  />
+            {/* <img src={'/shoppingbag.svg'} alt={image.alt}  /> */}
           </span>
         </button>
       </div>

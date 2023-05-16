@@ -43,10 +43,16 @@ export async function getStaticProps({ preview }) {
         slug
         price
       }
+      faq {
+        faqBlock {
+          faqTitle
+          faqContent
+        }
+      }
     }
     ${responsiveImageFragment}
     `,
-    preview,
+    includeDrafts: preview,
   };
 
   return {
@@ -67,7 +73,7 @@ export async function getStaticProps({ preview }) {
 
 export default function Home({ subscription }) {
   const {
-    data: { products },
+    data: { products, faq },
   } = useQuerySubscription(subscription);
 
   return (
@@ -114,7 +120,8 @@ export default function Home({ subscription }) {
             </div>
           </div>
         </section>
-        <Faq />
+        <div></div>
+        <Faq faq={faq} />
       </main>
       <Footer />
 

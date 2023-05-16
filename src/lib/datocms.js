@@ -1,25 +1,15 @@
-import tiny from 'tiny-json-http';
+import { GraphQLClient } from "graphql-request";
 
-export async function request({ query, variables, preview }) {
-  const endpoint = preview
-    ? `https://graphql.datocms.com/preview`
-    : `https://graphql.datocms.com/`;
-
-  const { body } = await tiny.post({
-    url: endpoint,
-    headers: {
-      authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_READONLY_API_KEY}`,
-    },
-    data: {
-      query,
-      variables,
-    },
-  });
-
-  if (body.errors) {
-    console.error('Ouch! The query has some errors!');
-    throw body.errors;
+export function request({ query, variables, includeDrafts, excludeInvalid }) {
+  const headers = {
+    authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_READONLY_API_KEY}`,
+  };
+  if (includeDrafts) {
+    headers['X-Include-Drafts'] = 'true';
   }
-
-  return body.data;
+  if (excludeInvalid) {
+    headers['X-Exclude-Invalid'] = 'true';
+  }
+  const client = new GraphQLClient('https://graphql.datocms.com', { headers });
+  return client.request(query, variables);
 }

@@ -50,7 +50,7 @@ export default function Faq({}) {
     <section className={styles.faq}>
       <div className={styles.container}>
         <div className={styles.faq_eyebrow}>FAQs</div>
-        <h2 className={styles.faq_headline}>Frequently Asked Questions</h2>
+        <h2 className={`${styles.faq_headline} ${roboto.className}`}>Frequently Asked Questions</h2>
         <ul className={styles.faq_list}>
           {faqItems.map((item,index) => (
             <li onClick={() => handleClick(index)} key={index} className={styles.faq_list_item}>

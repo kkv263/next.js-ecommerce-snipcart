@@ -35,5 +35,26 @@
       }
     }
   }
+}
 
+.footer_socials {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+
+.footer_socials_item {
+  background-color: #fff;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    height: 24px;
+  }
+  &:first-child {
+    margin-right: 16px;
+  }
 }

@@ -101,11 +101,17 @@ export default function Home({ subscription }) {
           </div>
         </section>
         <Benefits />
-        <section>
-          <div className={styles.grid}>
-            {products.map((product, i) => (
-              <DatoProduct {...product} key={i} />
-            ))}
+        <section className={styles.product}>
+          <div className={styles.container}>
+            <header className={styles.product_header}>
+              <h2 className={`${styles.product_headline} ${roboto.className}`}>Best Sellers</h2>
+              <Button color="secondary" href="/shop" arrow="true">See More</Button>
+            </header>
+            <div className={styles.grid}>
+              {products.map((product, i) => (
+                <DatoProduct {...product} key={i} />
+              ))}
+            </div>
           </div>
         </section>
         <Faq />

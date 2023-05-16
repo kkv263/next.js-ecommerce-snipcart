@@ -19,7 +19,7 @@ export default function Benefits({}) {
   return (
     <section className={styles.benefits}>
       <div className={styles.container}>
-        <h2 className={styles.benefits_headline}>Reap Natural Benefits</h2>
+        <h2 className={`${styles.benefits_headline} ${roboto.className}`}>Reap Natural Benefits</h2>
         <p className={styles.benefits_subheadline}>Lorem ipsum dolor sit <br></br>amet, consectetur adipiscing elit. </p>
         <div className={styles.benefits_img_wrapper}>
           <Image src="/maitake.png" width={600} height={480} alt="maitake"></Image>

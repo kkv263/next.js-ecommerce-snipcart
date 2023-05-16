@@ -1,4 +1,5 @@
-import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link"
 import styles from "../styles/Footer.module.scss"
 import { Roboto_Mono } from 'next/font/google';
 import { Roboto } from "next/font/google";
@@ -35,8 +36,15 @@ export default function Footer({}) {
           <small>Myco&apos;s Market &copy;2023</small>
         </div>
         <div className={styles.footer_right}>
-          <div>Find Us At:</div>
-          <ul></ul>
+          <div className={robotoMono.className}v>Find Us At:</div>
+          <ul className={styles.footer_socials}>
+            <li className={styles.footer_socials_item}>
+              <Link href="/"><Image src="instagram.svg" width={24} height={24} alt="instagram icon" /></Link>
+            </li>
+            <li className={styles.footer_socials_item}>
+              <Link href="/"><Image src="twitter.svg" width={24} height={24} alt="twitter icon" /></Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

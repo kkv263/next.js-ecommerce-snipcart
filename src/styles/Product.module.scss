@@ -1,14 +1,14 @@
 @import 'vars';
 
 .product {
-  margin: 1%;
-  padding: 15px;
-  width: 28%;
-  border-radius: 5px;
+  background-color: #272727;
+  border-radius: 8px;
+  padding-bottom: 32px;
 }
 
 .product_img {
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .product_text {

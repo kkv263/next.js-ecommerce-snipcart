@@ -20,9 +20,9 @@ export default function Benefits({}) {
     <section className={styles.benefits}>
       <div className={styles.container}>
         <h2 className={`${styles.benefits_headline} ${roboto.className}`}>Reap Natural Benefits</h2>
-        <p className={styles.benefits_subheadline}>Lorem ipsum dolor sit <br></br>amet, consectetur adipiscing elit. </p>
+        <p className={styles.benefits_subheadline}>See how mushrooms<br></br> affect your body positively. </p>
         <div className={styles.benefits_img_wrapper}>
-          <Image src="/maitake.png" width={600} height={480} alt="maitake"></Image>
+          <Image src="/mushroomgroup.png" width={480} height={480} alt="maitake"></Image>
         </div>
         <Button color="secondary" href="/blog" arrow="true">Learn More</Button>
       </div>

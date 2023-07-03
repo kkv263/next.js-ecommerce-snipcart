@@ -98,11 +98,11 @@ export default function Home({ subscription }) {
           <div className={styles.container_full}>
             <div className={styles.hero_left}>
               <h1 className={roboto.className}>For mushroom <br></br>lovers, <span className={styles.hero_highlight}>by <br></br>mushroom lovers</span></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ex molestie, feugiat sem eu, venenatis dui. Morbi dui nibh, luctus non mattis eu, convallis non lectus. </p>
+              <p>Here at Myco's, we provide the highest quality mushrooms fit for consumption. Locally grown, hand picked, and delicately inspected so you can enjoy mushrooms the way they were meant to be.</p>
               <Button href="/shop" size={'large'}>Shop Now</Button>
             </div>
             <div className={styles.hero_right}>
-              <Image src='/herodark.jpg' alt={'woman holding mushrooms'} fill/>
+              <Image src='/heroshitake.png' alt={'mushrooms in a field'} fill/>
             </div>
           </div>
         </section>
@@ -111,7 +111,7 @@ export default function Home({ subscription }) {
           <div className={styles.container}>
             <header className={styles.product_header}>
               <h2 className={`${styles.product_headline} ${roboto.className}`}>Best Sellers</h2>
-              <Button color="secondary" href="/shop" arrow="true">See More</Button>
+              {/* <Button color="secondary" href="/shop" arrow="true">See More</Button> */}
             </header>
             <div className={styles.grid}>
               {products.map((product, i) => (

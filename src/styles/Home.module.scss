@@ -48,8 +48,10 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 40px;
 }
 

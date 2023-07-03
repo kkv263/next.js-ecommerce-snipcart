@@ -13,6 +13,11 @@
 
 .nav_logo {
   font-size: 32px;
+  display: flex;
+  align-items: center;
+  span {
+    padding-left: 16px;
+  }
 }
 
 .nav_links {
